@@ -1,0 +1,2 @@
+# newProject
+for training angular
