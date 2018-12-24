@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Test1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
@@ -30,4 +29,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # newProject
 for training angular
 starting creating new branches 
->>>>>>> f321ca7ea0222833d0122b9e488480dc96cf3b24
