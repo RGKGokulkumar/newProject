@@ -1,32 +1,40 @@
-
 <mat-toolbar color="primary">
   <span>Login</span>
 </mat-toolbar>
 
-<div class="index-container">
-  <mat-form-field>
-    <input matInput placeholder="First Name">
-  </mat-form-field>
-</div>
-
-<div class="index-container">
-  <mat-form-field>
-    <input matInput placeholder="Last Name">
-  </mat-form-field>
-</div>
-
-<div class="index-container">
-  <mat-form-field>
-    <input type="number" matInput placeholder="Age">
-  </mat-form-field>
-</div>
-
-<mat-radio-group class="radio-button">
-  <mat-radio-button type="radio" value="1">Male</mat-radio-button>
-  <mat-radio-button type="radio" value="0">Female</mat-radio-button>
-</mat-radio-group>
-
-<div class="example-button-row">
+<mat-card class="card-component">
+<div class="body-component">
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="First Name" required>
+    </mat-form-field>
+  </div>
+      
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Last Name">
+    </mat-form-field>
+  </div>
+      
+  <div>
+    <mat-form-field>
+      <input type="number" matInput placeholder="Age" min="1" max="120" required>
+    </mat-form-field>
+  </div>
+      
+  <mat-radio-group class="radio-group">
+    <div class="radio-button">
+     <mat-radio-button type="radio" value="1">Male</mat-radio-button>
+     <mat-radio-button class="radio-button-female" type="radio" value="0">Female</mat-radio-button>
+    </div>
+  </mat-radio-group>
+      
+  <div  class="example-button-row">
     <button mat-raised-button color="warn">cancel</button>
     <button mat-raised-button color="accent">save</button>
+  </div>
 </div>
+</mat-card>
+
+
+

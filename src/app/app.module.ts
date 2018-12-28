@@ -8,10 +8,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import { ListItemComponent } from './list-item/list-item.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ListItemComponent,
      ],
   imports: [
     BrowserModule,
@@ -21,7 +25,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     BrowserAnimationsModule,
     MatRadioModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatListModule
   ],
 
   providers: [],

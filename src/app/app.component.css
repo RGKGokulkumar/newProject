@@ -1,13 +1,19 @@
-.index-container {
-    text-align: center;
-    flex-direction:row;
+.example-button-row button{
+    margin: 15px;
 }
 
-.example-button-row button{
-    margin-right: 35px;
-    margin-top: 15px;
+.body-component {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.radio-button{
-    margin: 20px;
+.radio-button-female{
+    margin-left:20px;
 }
+.card-component{
+    margin: auto;
+    width: 30%;
+    margin-top: 5%;
+}
+
 
