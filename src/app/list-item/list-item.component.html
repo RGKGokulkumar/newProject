@@ -1,5 +1,13 @@
-<mat-list role="list">
-  <mat-list-item role="listbox">Fruits</mat-list-item>
-  <mat-list-item role="listbox">Vegetable</mat-list-item>
-  <mat-list-item role="listbox">Cookies</mat-list-item>
-</mat-list>
+<mat-card >
+  <cdk-virtual-scroll-viewport itemSize="15" class="list-component">
+    <dl class="scroll">
+      <ng-container *cdkVirtualFor="listitem">
+        <dt class="scroll-content-dt">{{state.name}}</dt>
+      </ng-container>
+    </dl>
+  </cdk-virtual-scroll-viewport>
+</mat-card>
+
+<div class="button-list-component">
+  <button mat-raised-button color="primary">switch</button>
+</div>
