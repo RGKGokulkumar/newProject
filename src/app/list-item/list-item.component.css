@@ -1,12 +1,13 @@
 .list-component{
     width: 30%;
-    height: 30%;
+    height: 50vh;
     margin-top: 2%;
+    overflow: scroll;
 }
 .button-list-component{
     margin-left: 60%;
     margin-top: 1%;
 }
 .scroll-content-dt{
-    height: 5%;
+    height: 1%;
 }

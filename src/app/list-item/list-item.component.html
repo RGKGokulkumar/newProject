@@ -1,12 +1,9 @@
-<mat-card >
-  <cdk-virtual-scroll-viewport itemSize="15" class="list-component">
-    <dl class="scroll">
-      <ng-container *cdkVirtualFor="listitem">
-        <dt class="scroll-content-dt">{{state.name}}</dt>
-      </ng-container>
-    </dl>
-  </cdk-virtual-scroll-viewport>
-</mat-card>
+<div class="list-component">
+  <mat-card *ngFor="let list of state" class="scroll-content-dt">          
+    <div >{{list.name}}</div>
+  </mat-card>    
+</div>
+
 
 <div class="button-list-component">
   <button mat-raised-button color="primary">switch</button>
