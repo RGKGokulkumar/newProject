@@ -1,4 +1,5 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 body{
     background: #CDC9C8; 
+    margin: 0px;
 }

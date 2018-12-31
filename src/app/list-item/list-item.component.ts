@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy,Component, OnInit } from '@angular/core';
 import {FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY} from '@angular/cdk/scrolling';
+import { modelGroupProvider } from '@angular/forms/src/directives/ng_model_group';
+import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
 
 
 
@@ -36,6 +38,13 @@ export class ListItemComponent{
     {name:'Room Freshner'},
     {name:'Cleaner'},
   ];
+  menulist=[
+    {list:'SuperAdmin'},
+    {list:'Admin'},
+    {list:'WearHouseAdmin'},
+  ]
+  public Menu() {
+  }
 }
 export class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
 

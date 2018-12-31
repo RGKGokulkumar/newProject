@@ -1,10 +1,25 @@
-<div class="list-component">
-  <mat-card *ngFor="let list of state" class="scroll-content-dt">          
-    <div >{{list.name}}</div>
-  </mat-card>    
-</div>
+<div class="root-container">
+  <div class="slider-container">
+      <div>
+          <button color="warn" type="button" mat-raised-button (click)="drawer.toggle()">Menu</button>
+        </div>
+      <mat-drawer-container class="drawer-container">
+          <mat-drawer #drawer class="drawer-element" mode="side">
+            <div class="content-list" *ngFor="let menu of menulist">{{menu.list}}</div>
+          </mat-drawer>
+          
+        </mat-drawer-container>
+  </div>  
 
+  <div class="main-container">
+    <div class="list-component">
+      <mat-card *ngFor="let list of state" class="scroll-content-dt">
+        <div>{{list.name}}</div>
+      </mat-card>
+    </div>
 
-<div class="button-list-component">
-  <button mat-raised-button color="primary">switch</button>
+    <div class="button-list-component">
+      <button mat-raised-button color="primary">switch</button>
+    </div>
+  </div>
 </div>

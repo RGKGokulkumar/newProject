@@ -13,6 +13,7 @@ import { ListItemComponent } from './list-item/list-item.component';
 import {MatListModule} from '@angular/material/list';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { FormsModule } from '@angular/forms';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatListModule,
     ScrollDispatchModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule
   ],
 
   providers: [],
