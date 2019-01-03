@@ -1,0 +1,40 @@
+.dialog-button{
+    display: flex;
+    align-items: center;
+}
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+  .example-container{
+      height: 100%;
+      width: 100%;
+  }
+  .date-picker{
+      display: flex;
+      align-self: end;
+      margin-left: 2%;
+  }
+  .content-list{
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+  }  
+  .icon-home{
+      margin-left: 2%;
+  }
+
+.options{
+    /* position: absolute;
+    margin: 5px;
+    right: 0px; */
+    display: flex;
+    justify-content: end;
+    align-self: right;
+}

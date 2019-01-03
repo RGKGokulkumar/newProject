@@ -14,12 +14,26 @@ import {MatListModule} from '@angular/material/list';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { FormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { NavigationComponent, Dialog } from './navigation/navigation.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {HttpClientModule} from '@angular/common/http';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListItemComponent,
+    NavigationComponent,
+    Dialog
      ],
+     entryComponents:[
+      Dialog
+     ],
+    
   schemas:[
     NO_ERRORS_SCHEMA
   ],   
@@ -36,10 +50,17 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatListModule,
     ScrollDispatchModule,
     FormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDialogModule,
+    MatIconModule,
+    HttpClientModule,
+    MatButtonToggleModule,
+    MatMenuModule
   ],
 
   providers: [],
-  bootstrap: [ListItemComponent]
+  bootstrap: [NavigationComponent]
 })
 export class AppModule { }

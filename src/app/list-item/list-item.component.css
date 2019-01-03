@@ -3,11 +3,10 @@
     height: 100vh;
     flex-direction: row;
     flex: 1;
+    overflow: hidden;
 }
 
-/* 
-    slider in left
-*/
+
 .slider-container {
     flex: 1;
     background-color: white;
@@ -25,21 +24,21 @@
 
 .main-container {
     flex: 5;
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .list-component{
-    overflow: hidden;
-    height: 90%;
+    height: 50%;
+    overflow: scroll;
+    width: 50%;
 }
 
 .button-list-component{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     height: 10%;
 }
-
-
-
-
