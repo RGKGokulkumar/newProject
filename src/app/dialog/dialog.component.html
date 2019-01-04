@@ -1,0 +1,19 @@
+<div class="parent-container"> 
+<h1 mat-dialog-title>Product {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Add the Product</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.animal" placeholder="Enter product Name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.weight" placeholder="Kg/Mg/L/Ml">
+  </mat-form-field>
+  <mat-form_field>
+    <input matInput [(ngModel)]="data.Price" placeholder="Price">
+  </mat-form_field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>
+</div>

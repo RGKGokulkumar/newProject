@@ -1,8 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {MatDialog,MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material';
-
+import { DialogComponent } from '../dialog/dialog.component';
+import{ViewEncapsulation} from '@angular/core';
+import { from } from 'rxjs';
 
 export interface DialogData {
   animal:string;
@@ -12,7 +14,8 @@ export interface DialogData {
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  styleUrls: ['./navigation.component.css'],
+  encapsulation:ViewEncapsulation.None
 })
 export class NavigationComponent implements OnInit {
 
@@ -28,10 +31,11 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
   openDialog(): void {
-    const dialogRef = this.dialog.open(Dialog , {
-      width: '400px',
-      height:'500px',
-      data: {name: this.name, animal: this.animal}
+    const dialogRef = this.dialog.open(DialogComponent , {
+      width: '30vw',
+      data: {name: this.name, animal: this.animal},
+      panelClass:'custom-dialog-container',
+      
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -53,18 +57,5 @@ export class NavigationComponent implements OnInit {
     {list:'ReferalCode'},
     {list:'Cashback'},
   ]
-}
-@Component({
-  selector: 'dialog',
-  templateUrl: 'dialog.html',
-})
-export class Dialog {
 
-  constructor(
-    public dialogRef: MatDialogRef<Dialog>,
-    @Inject (MAT_DIALOG_DATA) public data: DialogData) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 }

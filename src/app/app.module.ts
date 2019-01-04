@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, Component } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatToolbarModule } from '@angular/material';
@@ -14,7 +14,7 @@ import {MatListModule} from '@angular/material/list';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { FormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { NavigationComponent, Dialog } from './navigation/navigation.component';
+import { NavigationComponent } from './navigation/navigation.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -22,16 +22,19 @@ import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatMenuModule} from '@angular/material/menu';
+import { DialogComponent } from './dialog/dialog.component';
+import{RouterModule,Routes} from '@angular/router'
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListItemComponent,
     NavigationComponent,
-    Dialog
+    DialogComponent
      ],
      entryComponents:[
-      Dialog
+      DialogComponent
      ],
     
   schemas:[
@@ -57,7 +60,11 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     HttpClientModule,
     MatButtonToggleModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule.forRoot([
+      {path:'save',component:AppComponent},
+      {path:'logout',component:ListItemComponent},
+    ])
   ],
 
   providers: [],
