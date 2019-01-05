@@ -47,18 +47,8 @@ export class NavigationComponent implements OnInit {
     });
   }
     menulist=[
-    {list:'SuperAdmin'},
-    {list:'Admin'},
-    {list:'WearHouseAdmin'},
-    {list:'update'},
-    {list:'Report'},
-    {list:'Product'},
-    {list:'Delivery'},
-    {list:'Order List'},
-    {list:'Product List'},
-    {list:'Product Price'},
-    {list:'ReferalCode'},
-    {list:'Cashback'},
+    {list:'Login'},
+    {list:'Create Form'},
+    {list:'List'},
   ]
-
 }

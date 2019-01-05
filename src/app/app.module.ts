@@ -25,13 +25,15 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DialogComponent } from './dialog/dialog.component';
 import{RouterModule,Routes} from '@angular/router'
 import { from } from 'rxjs';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListItemComponent,
     NavigationComponent,
-    DialogComponent
+    DialogComponent,
+    LoginComponent
      ],
      entryComponents:[
       DialogComponent
@@ -68,6 +70,6 @@ import { from } from 'rxjs';
   ],
 
   providers: [],
-  bootstrap: [NavigationComponent]
+  bootstrap: [LoginComponent]
 })
 export class AppModule { }
