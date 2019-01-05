@@ -1,51 +1,35 @@
-<mat-drawer-container class="example-container">
-  <div class="navigation-bar">
-    <mat-toolbar color="primary" class="toolbar">
-        <div class="example-sidenav-content">
-          <button type="button" mat-button (click)="drawer.toggle()">
-            <mat-button-toggle value="justify">
-              <mat-icon color="primary" src="/home/development/Downloads/Angular/test1/src/assets/image/baseline-menu-24px.svg">menu</mat-icon>
-            </mat-button-toggle>
-            Menu
+<div class="parent-container">
+  <mat-drawer-container class="drawer-container" autosize>
+      <mat-drawer #drawer class="sidenav" mode="side"  >
+          <button mat-button 
+            class="content-list" 
+            *ngFor="let menu of menulist">
+            {{menu.list}}
           </button>
-        </div>
-        <mat-icon class="icon-home" color="warn" type="button" (click)="appcom()" src="/home/development/Downloads/Angular/test1/src/assets/image/baseline-home-24px.svg">home</mat-icon>
-      <div class="div-space">
-        <input type="text" placeholder="search.." class="search">
+        </mat-drawer> 
+    <mat-toolbar>
+      <div>
+        <button mat-stroked-button 
+        (click)="drawer.toggle()">
+        <mat-icon 
+        src="src/assets/image/baseline-menu-24px.svg">menu</mat-icon>
+        </button>
       </div>
-        <mat-form-field class="date-picker">
-        <input matInput [matDatepicker]="picker" placeholder="Product date" disabled>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker disabled="false"></mat-datepicker>
-      </mat-form-field>
-      <button mat-button [matMenuTriggerFor]="options" class="options">options</button>
-      <mat-menu #options="matMenu" >
-        <button mat-menu-item >Save</button>
-        <button mat-menu-item >Log-out</button>
-      </mat-menu>
+      <div class="search">
+        <input type="text" placeholder="search..." >
+      </div>
+      <div class="space"></div>
+      <div>
+          <button mat-stroked-button [matMenuTriggerFor]="option">
+            <mat-icon src="src/assets/image/option.svg">option</mat-icon>
+          </button>
+          <mat-menu #option="matMenu">
+            <button mat-menu-item>save</button>
+            <button mat-menu-item>Logout</button>
+          </mat-menu>
+      </div>
     </mat-toolbar>
-  </div>
-  <div>
-<button mat-button routerLink="/save">save</button>
-<button mat-button routerLink="/logout">list</button>
-<router-outlet></router-outlet>
+    <p>jsdgvehrvg</p>
+    <p>jsdgvehrvg</p>
+  </mat-drawer-container>
 </div>
-  <ol>
-    <li>
-      <button mat-raised-button (click)="openDialog()" class="dialog-button">Add</button>
-    </li>
-    <li *ngIf='animal'>
-      Product is :<i>{{animal}}</i>
-    </li>
-    <li *ngIf='animal'>
-      weight is :<i>{{weight}}</i>
-    </li>
-    <li *ngIf='animal'>
-      Price is :<i>{{Price}}</i>
-    </li>
-  </ol>
-
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <button mat-button class="content-list" *ngFor="let menu of menulist">{{menu.list}}</button>
-  </mat-drawer>
-</mat-drawer-container>

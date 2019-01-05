@@ -35,6 +35,9 @@ export class NavigationComponent implements OnInit {
       width: '30vw',
       data: {name: this.name, animal: this.animal},
       panelClass:'custom-dialog-container',
+      position:{
+        top:'3vw',left:'6vw'
+      }
       
     });
 

@@ -1,57 +1,31 @@
-.dialog-button{
+.parent-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
-
-
-.toolbar {
-    display: flex;
-}
-.example-sidenav-content {
-    display: flex;
+/* hole div */
+.drawer-container {
     flex: 1;
 }
 
-.icon-home{
-    flex: 0.5;
+.sidenav {
+    padding: 2vw;
+    min-width: 200px !important;
+    width: 20vw !important;
+    max-width: 400px !important;
 }
 
-.div-space{
-    flex: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.content-list{
+    padding: 1vw;
+    flex-direction:column;
+    background-color: white;
+    width: 100%;
+}  
+/* menu-side-nav */
 .search{
-flex: 0.5;
-}
-
-.date-picker{
     display: flex;
-    align-self: end;
-    margin-left: 2%;
-    flex: 1;
+    margin-left: 10%;
 }
-
- options{
-    flex:0.5;
+.space{
+    flex: 4;
 }
-.button-route{
-    flex-direction: row;
-}
-
-.example-sidenav {
-    padding: 20px;
-}
-  .example-container{
-      height: 100%;
-      width: 100%;
-  }
-  
-  .content-list{
-      padding: 10px;
-      flex-direction: column;
-      background-color: white;
-      width: 100%;
-  }  
-  
