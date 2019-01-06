@@ -1,0 +1,13 @@
+/*title*/
+.parent-container{
+    display: flex;
+    overflow: hidden;
+}
+.title{
+    text-align: center;
+}
+/*customer-office-Main-div2*/
+.customer-office-detail-box{
+    display: flex;
+    flex-direction: row;
+}

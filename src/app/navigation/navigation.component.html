@@ -3,10 +3,10 @@
       <mat-drawer #drawer class="sidenav" mode="side"  >
           <button mat-button 
             class="content-list" 
-            *ngFor="let menu of menulist">
+            *ngFor="let menu of menulist" (click)="menuOption(menu);drawer.toggle()">
             {{menu.list}}
           </button>
-        </mat-drawer> 
+      </mat-drawer> 
     <mat-toolbar>
       <div>
         <button mat-stroked-button 
@@ -20,7 +20,7 @@
       </div>
       <div class="space"></div>
       <div>
-          <button mat-stroked-button [matMenuTriggerFor]="option">
+          <button mat-stroked-button class="option" [matMenuTriggerFor]="option">
             <mat-icon src="src/assets/image/option.svg">option</mat-icon>
           </button>
           <mat-menu #option="matMenu">
@@ -29,5 +29,6 @@
           </mat-menu>
       </div>
     </mat-toolbar>
+  <router-outlet></router-outlet>
   </mat-drawer-container>
 </div>

@@ -6,6 +6,7 @@
 /* hole div */
 .drawer-container {
     flex: 1;
+    overflow: hidden;
 }
 
 .sidenav {

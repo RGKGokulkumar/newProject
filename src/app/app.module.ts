@@ -26,14 +26,28 @@ import { DialogComponent } from './dialog/dialog.component';
 import{RouterModule,Routes} from '@angular/router'
 import { from } from 'rxjs';
 import { LoginComponent } from './login/login.component';
+import { CreateformComponent } from './createform/createform.component';
+import { ListwearhouseComponent } from './listwearhouse/listwearhouse.component';
+import { TemplateComponent } from './template/template.component';
 
+const appRoutes:Routes=[
+  {path:'save',component:AppComponent},
+  {path:'logout',component:ListItemComponent},
+  {path:'Login',component:LoginComponent},
+  {path:'Create_Form',component:CreateformComponent},
+  {path:'List',component:ListwearhouseComponent},
+  {path:'Template',component:TemplateComponent},
+]
 @NgModule({
   declarations: [
     AppComponent,
     ListItemComponent,
     NavigationComponent,
     DialogComponent,
-    LoginComponent
+    LoginComponent,
+    CreateformComponent,
+    ListwearhouseComponent,
+    TemplateComponent
      ],
      entryComponents:[
       DialogComponent
@@ -63,13 +77,10 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     MatButtonToggleModule,
     MatMenuModule,
-    RouterModule.forRoot([
-      {path:'save',component:AppComponent},
-      {path:'logout',component:ListItemComponent},
-    ])
+    RouterModule.forRoot(appRoutes)
   ],
 
   providers: [],
-  bootstrap: [LoginComponent]
+  bootstrap: [NavigationComponent]
 })
 export class AppModule { }
