@@ -1,27 +1,91 @@
-<div class="patent-container">
+<div class="patent-container" style="border-style:solid;
+margin: 3%">
   <div class="title">
     <p>Title</p>
   </div>
   <div class="customer-office-detail-box">
     <div class="address-invoice-column">
       <div class="customer-address">
-        <p>customer address</p>
+        <label for="customer-address">Customer-Address</label>
+        <label  id="customer-address">Address</label>
       </div>
       <div class="invoice">
-        <p>invoice</p>
+        <table class="invoice-table">
+          <tr>
+              <th>Title</th>
+              <th>Description</th>
+          </tr>
+          <tr>
+              <th>Reference Number</th>
+              <th>732914105027</th>
+          </tr>
+          <tr>
+              <th>Date of Issue</th>
+              <th>11/05/1996</th>
+          </tr>
+          <tr>
+              <th>Final Total</th>
+              <th>10.000</th>
+          </tr>
+          <tr>
+              <th>No.of.item</th>
+              <th>10</th>
+          </tr>
+        </table>
       </div>
     </div>
     <div class="image-office-address">
       <div class="image">
-        <p>image</p>
+        <img src="./../../assets//image//poolapal_logo.png"
+        width="15%" height="10%">
       </div>
       <div class="office-address">
-        <p>office address</p>
+        <label for="office-address">office-Address</label>
+        <label  id="office-address">Address</label>
       </div>
     </div>
   </div>
-  <div class="product_detail"></div>
-  <div class="total"></div>
-  <div class="gst"></div>
-  <div class="sign"></div>
+  <div class="product-detail">
+    <table class="table">
+      <tr>
+        <th>S.No</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Discount</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Biscuit</td>
+        <td>5 pocket</td>
+        <td>2%</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Fruits</td>
+        <td>2 kg</td>
+        <td>3%</td>
+        <td>70</td>
+      </tr>
+      <tr>
+        <td class="table-cell">3</td>
+        <td>Vegetable</td>
+        <td>4 kg</td>
+        <td>2%</td>
+        <td>100</td>
+      </tr>
+    </table>
+  </div>
+  <div class="total">
+    <p>Total</p>
+    <label for="price" style="margin:1%"></label>
+    <label class="total-text" id="price">Price</label>
+  </div>
+  <div class="gst">
+    <p class="gst-text">* include GST</p>
+  </div>
+  <div class="sign">
+    <p class="sign-text">Signature</p>
+  </div>
 </div>

@@ -5,9 +5,77 @@
 }
 .title{
     text-align: center;
+    background-color: blue;
+    margin: 3%;
+    color: white;
 }
-/*customer-office-Main-div2*/
+/*customer-office-detail-Main-div2*/
 .customer-office-detail-box{
     display: flex;
     flex-direction: row;
+}
+.address-invoice-column{
+    flex: 1;
+    margin: 2%;
+}
+.customer-address{
+    flex-direction: column;  
+    display: flex;  
+    margin: 3%;
+}
+.invoice{
+    margin: 3%;
+    display: flex;
+}
+.invoice-table{
+    flex: 1;
+    border-style: solid;
+}
+.image-office-address{
+    flex: 1;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    margin: 3%;
+    text-align: center;
+}
+.office-address{
+    margin: 3%;
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+}
+.product-detail{
+    display: flex;
+    justify-content: center;
+}
+.table{
+    border-style: solid;
+    flex: 1;
+    margin: 3%;
+    border-collapse: collapse;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+.gst{
+    text-align: start;
+}
+.sign{
+    text-align: end;
+    margin-top: 2%;
+}
+.gst-text{
+    margin-left: 3%;
+}
+.sign-text{
+    padding: 3%;
+}
+.total-text{
+    margin-right: 3%
 }
